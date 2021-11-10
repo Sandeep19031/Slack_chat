@@ -1,0 +1,22 @@
+import React from 'react'
+import './Message.css';
+
+function Message({ message, timestamp,user, userimage}) {
+
+   
+    return (
+        <div className="message" id="message" >
+            <img src={userimage} alt="" />  
+            <div className="message_info" style={{margin: "5px"}}>
+                <h4>{user} 
+                 <span className="message_timestamp">
+                    {new Date(timestamp?.toDate()).toUTCString()}
+                 </span></h4>
+                <p>{message}</p>
+            </div>              
+        </div>
+         
+    )
+}
+
+export default Message
